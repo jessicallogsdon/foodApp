@@ -43,7 +43,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
     })
     .when('/groceryList', {
       templateUrl: 'views/grocery.html',
-      controller: 'GroceryControl'
+      controller: 'GroceryCtrl'
     })
     .when('/404', {
       templateUrl: 'views/404.html',
