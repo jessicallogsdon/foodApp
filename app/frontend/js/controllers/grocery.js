@@ -2,5 +2,5 @@
 
 angular.module('foodTracker')
   .controller('GroceryCtrl', function ($rootScope) {
-	$rootScope.pageTitle = 'Homepage';
+	$rootScope.pageTitle = 'Grocery Page';
   });
