@@ -11,7 +11,7 @@ var app = angular.module('foodTracker', [
 
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider',
-  
+
   function ($routeProvider, $locationProvider, $httpProvider) {
 
 
@@ -35,11 +35,15 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
 
   $httpProvider.interceptors.push('InterceptorService');
 
-  
+
   $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
+    })
+    .when('/groceryList', {
+      templateUrl: 'views/grocery.html',
+      controller: 'GroceryControl'
     })
     .when('/404', {
       templateUrl: 'views/404.html',
@@ -53,7 +57,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
     .otherwise({
       redirectTo: '/404'
     });
-  
+
 
   $locationProvider.html5Mode(true);
 
